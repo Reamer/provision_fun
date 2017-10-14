@@ -22,5 +22,6 @@ RUN /usr/bin/apt-get update && \
     /usr/bin/apt-get -y install git pkg-config libvirt-dev gcc && \
     /usr/bin/apt-get clean && \
     /bin/mkdir ${GOPATH} && \
-    /usr/local/bin/go get github.com/dmacvicar/terraform-provider-libvirt
+    /usr/local/bin/go get github.com/dmacvicar/terraform-provider-libvirt && \
+    /usr/local/bin/terraform init
 ADD ./terraform-config/.terraformrc /root/.terraformrc
